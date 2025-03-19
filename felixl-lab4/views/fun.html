@@ -8,9 +8,9 @@
     <meta name="description" content="Felix Lin - Fun Activities">
     <title>For Fun</title>
     <link rel="stylesheet" href="../static/style.css">
-    <script src="static/script.js" defer></script>
+    <script src="../static/script.js" defer></script>
 </head>
-<body>
+<body onload="addYear()">
     <header>
         <h1 id="webname">Felix Lin</h1>
         <nav>
@@ -23,37 +23,17 @@
 
     <div class="main">
         <h2>Things I Love to Do for Fun</h2>
-
-        <button id="revealButton" onclick="revealContent()">Reveal Fun Activities</button>
-
-        <div id="funContent" style="display: none;">
-            <ul>
-                <li>Playing tennis 🎾</li>
-                <li>Coding fun projects 💻</li>
-                <li>Listening to music 🎶</li>
-                <li>Exploring new places 🌍</li>
-            </ul>
-        </div>
+        <button onclick="showList()">Click to see...</button>
+        <ul style="display: none;">
+            <li>Playing tennis 🎾</li>
+            <li>Coding fun projects 💻</li>
+            <li>Listening to music 🎶</li>
+            <li>Exploring new places 🌍</li>
+        </ul>
     </div>
 
     <footer>
-        <p>&copy; Felix Lin</p>
-        <p id="copyYear"></p>
+        <p>&copy; <span id="copyYear"></span> Felix Lin</p>
     </footer>
-
-    <script>
-        function revealContent() {
-            const funContent = document.getElementById("funContent");
-            const revealButton = document.getElementById("revealButton");
-
-            if (funContent.style.display === "none") {
-                funContent.style.display = "block"; 
-                revealButton.textContent = "Hide Fun Activities";
-            } else {
-                funContent.style.display = "none";
-                revealButton.textContent = "Reveal Fun Activities";
-            }
-        }
-    </script>
 </body>
 </html>

@@ -8,7 +8,7 @@
     <meta name="description" content="Felix Lin - Contact Me">
     <title>Contact Me</title>
     <link rel="stylesheet" href="../static/style.css">
-    <script src="static/script.js" defer></script>
+    <script src="../static/script.js" defer></script>
 </head>
 <body onload="addYear()">
     <header>
@@ -23,7 +23,7 @@
 
     <div class="main">
         <h2>Contact Me</h2>
-        <form id="contactForm" action="#" method="post">
+        <form action="#" method="post" onsubmit="return validateForm()">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
 
@@ -35,10 +35,6 @@
 
             <input type="submit" value="Send">
         </form>
-
-        <div id="validationMessage" style="color: red; display: none;">
-            <p>Please fill in all required fields!</p>
-        </div>
 
         <h3>Contact Information</h3>
         <table>
@@ -62,8 +58,7 @@
     </div>
 
     <footer>
-        <p>&copy; Felix Lin</p>
-        <p id="copyYear"></p>
+        <p>&copy; <span id="copyYear"></span> Felix Lin</p>
     </footer>
 </body>
 </html>

@@ -1,51 +1,50 @@
+function greetingFunc() {
+    let d = new Date();
+    let h = d.getHours();
+    let greetingMessage = "";
+
+    if (h < 12) {
+        greetingMessage = "Good morning!";
+    } else if (h < 18) {
+        greetingMessage = "Good afternoon!";
+    } else if (h < 20) {
+        greetingMessage = "Good evening!";
+    } else {
+        greetingMessage = "Good night!";
+    }
+
+    let greetingElement = document.getElementById("greeting");
+    if (greetingElement) {
+        greetingElement.innerHTML = greetingMessage;
+    }
+}
+
+if (window.location.href.includes("index.html")) {
+    greetingFunc();
+}
+
 function addYear() {
-    const year = new Date().getFullYear();
-    document.getElementById("copyYear").textContent = year;
+    let currentYear = new Date().getFullYear();
+    document.getElementById("copyYear").textContent = currentYear;
 }
 
-function revealContent() {
-    const funContent = document.getElementById("funContent");
-    const revealButton = document.getElementById("revealButton");
-
-    if (funContent.style.display === "none" || funContent.style.display === "") {
-        funContent.style.display = "block";
-        revealButton.textContent = "Hide Fun Activities";
-    } else {
-        funContent.style.display = "none";
-        revealButton.textContent = "Reveal Fun Activities";
-    }
+function showList() {
+    document.querySelector("ul").style.display = "block";
+    document.querySelector("button").style.display = "none";
 }
 
-function toggleBio() {
-    const shortBio = document.getElementById("shortBio");
-    const longBio = document.getElementById("longBio");
-    const readMoreBtn = document.getElementById("readMoreBtn");
+$(document).ready(function() {
+    $("#readMoreBtn").click(function() {
+        $("#shortBio").hide();
+        $("#fullBio").show();
+        $("#readMoreBtn").hide();
+        $("#readLessBtn").show();
+    });
 
-    if (shortBio.style.display === "none") {
-        shortBio.style.display = "block";
-        longBio.style.display = "none";
-        readMoreBtn.textContent = "Read More";
-    } else {
-        shortBio.style.display = "none";
-        longBio.style.display = "block";
-        readMoreBtn.textContent = "Read Less";
-    }
-}
-
-document.getElementById("contactForm").onsubmit = function(event) {
-    event.preventDefault();
-    var formValid = true;
-    var validationMessage = document.getElementById("validationMessage");
-    
-    if (!document.getElementById("name").checkValidity() ||
-        !document.getElementById("email").checkValidity() ||
-        !document.getElementById("message").checkValidity()) {
-        formValid = false;
-        validationMessage.style.display = "block";
-    }
-    
-    if (formValid) {
-        validationMessage.style.display = "none";
-        alert("Form submitted successfully!");
-    }
-};
+    $("#readLessBtn").click(function() {
+        $("#fullBio").hide();
+        $("#shortBio").show();
+        $("#readLessBtn").hide();
+        $("#readMoreBtn").show();
+    });
+});

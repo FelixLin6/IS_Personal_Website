@@ -6,8 +6,9 @@
     <meta name="author" content="Felix Lin">
     <meta name="keywords" content="Carnegie Mellon University, Information Systems">
     <meta name="description" content="Felix Lin - Professional Website">
-    <title>Your Name</title>
+    <title>Felix Lin</title>
     <link rel="stylesheet" href="static/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="static/script.js" defer></script>
 </head>
 
@@ -28,19 +29,17 @@
         <p id="intro">
             Welcome to my personal website! This is where I showcase my work, interests, and background.
         </p>
-
-        <!-- Read More / Read Less toggle -->
-        <div id="bioSection">
-            <p id="shortBio">I am a student at Carnegie Mellon University, studying Information Systems. I have a passion for technology and data-driven decision making.</p>
-            <p id="longBio" style="display: none;">I am a student at Carnegie Mellon University, studying Information Systems. I have a passion for technology and data-driven decision making. In addition to my academic pursuits, I enjoy exploring the intersection of technology and business, and I have a keen interest in data analytics, machine learning, and digital innovation. When I'm not studying, I love working on personal coding projects and contributing to open-source initiatives. I believe in the power of technology to solve real-world problems and improve people's lives.</p>
-            <button id="readMoreBtn" onclick="toggleBio()">Read More</button>
+        <div id="bio">
+            <p id="shortBio">This is a short bio about me...</p>
+            <p id="fullBio" style="display: none;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            <button id="readMoreBtn">Read More</button>
+            <button id="readLessBtn" style="display: none;">Read Less</button>
         </div>
     </div>
 
     <footer>
-        <p>&copy; Felix Lin</p>
-        <p id="copyYear"></p>
+        <p>&copy; <span id="copyYear"></span> Felix Lin</p>
     </footer>
-
 </body>
 </html>
