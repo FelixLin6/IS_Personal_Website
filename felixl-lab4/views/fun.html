@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../static/style.css">
     <script src="static/script.js" defer></script>
 </head>
-<body onload="addYear()">
+<body>
     <header>
         <h1 id="webname">Felix Lin</h1>
         <nav>
@@ -41,5 +41,19 @@
         <p id="copyYear"></p>
     </footer>
 
+    <script>
+        function revealContent() {
+            const funContent = document.getElementById("funContent");
+            const revealButton = document.getElementById("revealButton");
+
+            if (funContent.style.display === "none") {
+                funContent.style.display = "block"; 
+                revealButton.textContent = "Hide Fun Activities";
+            } else {
+                funContent.style.display = "none";
+                revealButton.textContent = "Reveal Fun Activities";
+            }
+        }
+    </script>
 </body>
 </html>
