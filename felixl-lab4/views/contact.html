@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../static/style.css">
     <script src="static/script.js" defer></script>
 </head>
-<body>
+<body onload="addYear()">
     <header>
         <h1 id="webname">Felix Lin</h1>
         <nav>
@@ -36,7 +36,6 @@
             <input type="submit" value="Send">
         </form>
 
-        <!-- Validation Message Display -->
         <div id="validationMessage" style="color: red; display: none;">
             <p>Please fill in all required fields!</p>
         </div>
@@ -66,27 +65,5 @@
         <p>&copy; Felix Lin</p>
         <p id="copyYear"></p>
     </footer>
-
-    <script>
-        // Form validation script
-        document.getElementById("contactForm").onsubmit = function(event) {
-            event.preventDefault();
-            var formValid = true;
-            var validationMessage = document.getElementById("validationMessage");
-            
-            // Check each required field
-            if (!document.getElementById("name").checkValidity() ||
-                !document.getElementById("email").checkValidity() ||
-                !document.getElementById("message").checkValidity()) {
-                formValid = false;
-                validationMessage.style.display = "block";
-            }
-            
-            if (formValid) {
-                validationMessage.style.display = "none";
-                alert("Form submitted successfully!");
-            }
-        };
-    </script>
 </body>
 </html>

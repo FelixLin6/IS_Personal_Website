@@ -1,16 +1,21 @@
-// Function to update the footer with the current year
 function addYear() {
     const year = new Date().getFullYear();
     document.getElementById("copyYear").textContent = year;
 }
 
-// Function for the "Click to see..." button in fun.html
-function showList() {
-    document.getElementById("myList").style.display = "block";
-    document.getElementById("showButton").style.display = "none";
+function revealContent() {
+    const funContent = document.getElementById("funContent");
+    const revealButton = document.getElementById("revealButton");
+
+    if (funContent.style.display === "none") {
+        funContent.style.display = "block";
+        revealButton.textContent = "Hide Fun Activities";
+    } else {
+        funContent.style.display = "none";
+        revealButton.textContent = "Reveal Fun Activities";
+    }
 }
 
-// Function to toggle the "Read More / Read Less" bio section
 function toggleBio() {
     const shortBio = document.getElementById("shortBio");
     const longBio = document.getElementById("longBio");
@@ -26,3 +31,21 @@ function toggleBio() {
         readMoreBtn.textContent = "Read Less";
     }
 }
+
+document.getElementById("contactForm").onsubmit = function(event) {
+    event.preventDefault();
+    var formValid = true;
+    var validationMessage = document.getElementById("validationMessage");
+
+    if (!document.getElementById("name").checkValidity() ||
+        !document.getElementById("email").checkValidity() ||
+        !document.getElementById("message").checkValidity()) {
+        formValid = false;
+        validationMessage.style.display = "block";
+    }
+    
+    if (formValid) {
+        validationMessage.style.display = "none";
+        alert("Form submitted successfully!");
+    }
+};
