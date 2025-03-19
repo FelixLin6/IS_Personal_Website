@@ -23,21 +23,41 @@
 
     <div class="main">
         <h2>Things I Love to Do for Fun</h2>
-        <!-- Button to show/hide the list -->
-        <button id="showButton" onclick="showList()">Click to see...</button>
 
-        <!-- Hidden list -->
-        <ul id="myList" style="display: none;">
-            <li>Playing tennis 🎾</li>
-            <li>Coding fun projects 💻</li>
-            <li>Listening to music 🎶</li>
-            <li>Exploring new places 🌍</li>
-        </ul>
+        <!-- Button to reveal the list -->
+        <button id="revealButton" onclick="revealContent()">Reveal Fun Activities</button>
+
+        <!-- Hidden content to reveal -->
+        <div id="funContent" style="display: none;">
+            <ul>
+                <li>Playing tennis 🎾</li>
+                <li>Coding fun projects 💻</li>
+                <li>Listening to music 🎶</li>
+                <li>Exploring new places 🌍</li>
+            </ul>
+        </div>
     </div>
 
     <footer>
         <p>&copy; Felix Lin</p>
         <p id="copyYear"></p>
     </footer>
+
+    <script>
+        // Function to reveal the content when the button is clicked
+        function revealContent() {
+            const funContent = document.getElementById("funContent");
+            const revealButton = document.getElementById("revealButton");
+
+            // Check if the content is hidden or visible
+            if (funContent.style.display === "none") {
+                funContent.style.display = "block";  // Show content
+                revealButton.textContent = "Hide Fun Activities"; // Change button text
+            } else {
+                funContent.style.display = "none";  // Hide content
+                revealButton.textContent = "Reveal Fun Activities"; // Change button text back
+            }
+        }
+    </script>
 </body>
 </html>
