@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Felix Lin">
+    <meta name="keywords" content="Carnegie Mellon University, Contact">
+    <meta name="description" content="Felix Lin - Contact Me">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <script src="static/script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1 id="webname">Felix Lin</h1>
+        <nav>
+            <a href="../index.html">About</a> |
+            <a href="cv.html">CV</a> |
+            <a href="contact.html">Contact Me</a> |
+            <a href="fun.html">For Fun</a>
+        </nav>
+    </header>
+
+    <div class="main">
+        <h2>Contact Me</h2>
+        <form id="contactForm" action="#" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" cols="30" required></textarea>
+
+            <input type="submit" value="Send">
+        </form>
+
+        <h3>Contact Information</h3>
+        <table>
+            <tr>
+                <th>Type</th>
+                <th>Details</th>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td>felixl@andrew.cmu.edu</td>
+            </tr>
+            <tr>
+                <td>Phone</td>
+                <td>(949) 981-0389</td>
+            </tr>
+            <tr>
+                <td>LinkedIn</td>
+                <td><a href="https://www.linkedin.com/in/felix-lin-52048b29a" target="_blank">LinkedIn Profile</a></td>
+            </tr>
+        </table>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Felix Lin</p>
+    </footer>
+
+    <script>
+        // Form validation script
+        document.getElementById("contactForm").onsubmit = function(event) {
+            event.preventDefault();
+            var formValid = true;
+            var validationMessage = document.getElementById("validationMessage");
+            
+            // Check each required field
+            if (!document.getElementById("name").checkValidity() ||
+                !document.getElementById("email").checkValidity() ||
+                !document.getElementById("message").checkValidity()) {
+                formValid = false;
+                validationMessage.style.display = "block";
+            }
+            
+            if (formValid) {
+                validationMessage.style.display = "none";
+                alert("Form submitted successfully!");
+            }
+        };
+    </script>
+</body>
+</html>
