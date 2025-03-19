@@ -7,7 +7,7 @@ function revealContent() {
     const funContent = document.getElementById("funContent");
     const revealButton = document.getElementById("revealButton");
 
-    if (funContent.style.display === "none") {
+    if (funContent.style.display === "none" || funContent.style.display === "") {
         funContent.style.display = "block";
         revealButton.textContent = "Hide Fun Activities";
     } else {
@@ -36,7 +36,7 @@ document.getElementById("contactForm").onsubmit = function(event) {
     event.preventDefault();
     var formValid = true;
     var validationMessage = document.getElementById("validationMessage");
-
+    
     if (!document.getElementById("name").checkValidity() ||
         !document.getElementById("email").checkValidity() ||
         !document.getElementById("message").checkValidity()) {
