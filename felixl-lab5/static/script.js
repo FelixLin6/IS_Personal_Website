@@ -191,3 +191,62 @@ function addYear() {
         $("#readMoreBtn").show();
     });
 });
+
+
+// Function to fetch random advice
+function getAdvice() {
+    fetch("https://api.adviceslip.com/advice")
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById("adviceText").innerText = data.slip.advice;
+        })
+        .catch(error => {
+            console.error("Error fetching advice:", error);
+            document.getElementById("adviceText").innerText = "Failed to fetch advice. Please try again.";
+        });
+}
+
+// Function to add the current year to the footer
+function addYear() {
+    var d = new Date();
+    var y = d.getFullYear();
+    var E = document.getElementById("copyYear");
+    E.innerHTML += y;
+}
+
+// Form validation
+function validate() {
+    var userName = document.getElementById("name");
+    var userEmail = document.getElementById("email");
+    var userText = document.getElementById("comment");
+    var msg = document.getElementById("ValidateMsg");
+
+    if (!userName.checkValidity() || !userEmail.checkValidity() || !userText.checkValidity()) {
+        msg.innerHTML = "Please fill out the form correctly so I can get back to you :)";
+    } else {
+        msg.innerHTML = "Thank you for your message!";
+    }
+}
+
+// Conditional Date Greeting for index.html ONLY
+function greetingFunc() {
+    var d = new Date();
+    var h = d.getHours();
+    var E = document.getElementById("greeting");
+
+    if (h >= 5 && h < 12) {
+        E.innerHTML = "Good morning, my name is Felix.";
+    } else if (h >= 12 && h < 18) {
+        E.innerHTML = "Good afternoon, my name is Felix.";
+    } else if (h >= 18 && h < 20) {
+        E.innerHTML = "Good evening, my name is Felix.";
+    } else {
+        E.innerHTML = "Good night, my name is Felix.";
+    }
+}
+
+// Check if the current page is index.html before running the greeting function
+var L = window.location.href;
+if (L.includes("index.html")) {
+    greetingFunc();
+}

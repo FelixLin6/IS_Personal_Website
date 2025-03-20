@@ -8,15 +8,13 @@
     <meta name="description" content="Felix Lin - Fun Activities">
     <title>Felix Lin</title>
     <link rel="stylesheet" href="../static/style.css">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <script defer src="../static/script.js"></script>
 </head>
-<body onload=" addYear()">
+<body onload="addYear()">
     <header>
         <h1 id="webname">Felix Lin</h1>
         <nav>
@@ -27,19 +25,34 @@
         </nav>
     </header>
 
-    <div class="main">
-        <h2>Things I Love to Do for Fun</h2>
-        <button onclick="showList()">Click to see...</button>
-        <ul id="FavList" style="display: none;">
-            <li>Playing tennis 🎾</li>
-            <li>Coding fun projects 💻</li>
-            <li>Listening to music 🎶</li>
-            <li>Exploring new places 🌍</li>
-        </ul>
+    <div class="mainLayout">
+        <div id="item1">
+            <h2>Things I Love to Do for Fun</h2>
+            <ul id="FavList">
+                <li>Playing tennis 🎾</li>
+                <li>Coding fun projects 💻</li>
+                <li>Listening to music 🎶</li>
+                <li>Exploring new places 🌍</li>
+            </ul>
+        </div>
+
+        <div id="item2">
+            <img src="../static/cow.gif" alt="A fun GIF" class="funIMG">
+        </div>
+
+        <div id="item3">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/qM43gnigKgQ?si=Z22tfu_DDdbguv1g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <div id="item4" class="container">
+            <h2>Need Some Advice?</h2>
+            <p id="adviceText">Click the button to get a random piece of advice!</p>
+            <button onclick="getAdvice()">Get Advice</button>
+        </div>
     </div>
 
     <footer>        
-        <p id="copyYear">designed 🎨 and coded 👩🏻‍💻 by Felix Lin &copy; </p>
+        <p id="copyYear">designed and coded by Felix Lin &copy; </p>
     </footer>
 </body>
 </html>
