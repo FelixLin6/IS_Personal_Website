@@ -56,31 +56,3 @@ input[type="submit"] {
 input[type="submit"]:hover {
     background-color: #45a049;
 }
-
-#FavList {
-    display: none;
- }
- #SeeMoreBTN{
-    background-color: lightgrey;
-    border: 0px;
-    border-radius: 16px;
-    font-size:large;
- }
-
- #shortIntro {
-    display: block;
- }
- 
- #readLess, #longIntro {
-    display: none;
- }
- 
- #readLess, #readMore {
-    font-style: italic;
-    background-color: lightgrey;
- }
- 
- #ValidateMsg {
-    width: max-content;
-    margin: auto;
- }

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Felix Lin">
+    <meta name="keywords" content="Carnegie Mellon University, Fun">
+    <meta name="description" content="Felix Lin - Fun Activities">
+    <title>Felix Lin</title>
+    <link rel="stylesheet" href="../static/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script defer src="../static/script.js"></script>
+</head>
+<body onload=" addYear()">
+    <header>
+        <h1 id="webname">Felix Lin</h1>
+        <nav>
+            <a href="../index.html">about</a>
+            <a href="cv.html">resume</a>
+            <a href="fun.html">for fun</a>
+            <a href="contact.html">contact</a>
+        </nav>
+    </header>
+
+    <div class="main">
+        <h2>Things I Love to Do for Fun</h2>
+        <button onclick="showList()">Click to see...</button>
+        <ul id="FavList" style="display: none;">
+            <li>Playing tennis 🎾</li>
+            <li>Coding fun projects 💻</li>
+            <li>Listening to music 🎶</li>
+            <li>Exploring new places 🌍</li>
+        </ul>
+    </div>
+
+    <footer>        
+        <p id="copyYear">designed 🎨 and coded 👩🏻‍💻 by Felix Lin &copy; </p>
+    </footer>
+</body>
+</html>
