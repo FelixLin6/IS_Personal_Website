@@ -7,35 +7,36 @@
     <meta name="keywords" content="Carnegie Mellon University, Information Systems">
     <meta name="description" content="Felix Lin - Professional Website">
     <title>Felix Lin</title>
-    <link rel="stylesheet" href="static/style.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="static/script.js" defer></script>
+    <link rel="stylesheet" href="./static/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script defer src="./static/script.js"></script>
 </head>
 
 <body onload="addYear()">
     <header>
         <h1 id="webname">Felix Lin</h1>
         <nav>
-            <a href="index.html">About</a> |
-            <a href="views/cv.html">CV</a> |
-            <a href="views/contact.html">Contact Me</a> |
-            <a href="views/fun.html">For Fun</a>
+            <a href="index.html">about</a>
+            <a href="views/cv.html">resume</a>
+            <a href="views/fun.html">for fun</a>
+            <a href="views/contact.html">contact</a>
         </nav>
     </header>
-
     <div class="main">
-        <h2 id="greeting">Hi, my name is Felix</h2>
-        <img src="static/IMG_8774.jpeg" alt="A picture of me" width="200">
-        <p id="intro">
-            Welcome to my personal website! This is where I showcase my work, interests, and background.
-        </p>
+        <h2 id="greeting"></h2>
+        <img src="static/IMG_8774.jpeg" alt="A picture of me" width="350">
         <div id="bio">
-            <p id="shortBio">This is a short bio about me...</p>
+            <p id="shortBio">Lorem ipsum...</p>
             <p id="fullBio" style="display: none;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
             <button id="readMoreBtn">Read More</button>
             <button id="readLessBtn" style="display: none;">Read Less</button>
-        </div>
+        </div>  
     </div>
 
     <footer>
