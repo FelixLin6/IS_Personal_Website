@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Felix Lin - Fun</title>
+  <link rel="stylesheet" href="../static/style.css" />
+  <link rel="stylesheet" href="../static/templates.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script defer src="../static/script.js"></script>
+</head>
+<body onload="addYear()">
+  <div class="container">
+    <header class="header"><h1 id="webname">Felix Lin</h1></header>
+
+    <nav class="nav">
+      <div class="nav-links" id="navLinks">
+        <a href="../index.html">about</a>
+        <a href="cv.html">resume</a>
+        <a href="fun.html">for fun</a>
+        <a href="contact.html">contact</a>
+      </div>
+      <i class="fas fa-bars" id="hamburger"></i>
+    </nav>
+
+    <main class="maincontent">
+      <h2>Need Some Advice?</h2>
+      <p id="adviceText">Click the button to get a random piece of advice!</p>
+      <button onclick="getAdvice()">Get Advice</button>
+      <img src="../static/cow.gif" alt="A fun GIF" class="funIMG" />
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/qM43gnigKgQ" allowfullscreen></iframe>
+    </main>
+
+    <aside class="sidebar">
+      <h2>Things I Love to Do for Fun</h2>
+      <ul id="FavList">
+        <li>Playing tennis 🎾</li>
+        <li>Coding fun projects 💻</li>
+        <li>Listening to music 🎶</li>
+        <li>Exploring new places 🌍</li>
+      </ul>
+    </aside>
+
+    <footer class="footer"><p id="copyYear">designed and coded by Felix Lin &copy; </p></footer>
+  </div>
+</body>
+</html>
