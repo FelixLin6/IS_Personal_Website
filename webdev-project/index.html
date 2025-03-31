@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Duquesne Incline - Home</title>
+  <link rel="stylesheet" href="static/styles.css" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <header>
+    <img src="static/images/logo.png" alt="Duquesne Incline Logo" class="logo" />
+    <nav>
+      <ul class="nav-bar">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="views/history.html">History</a></li>
+        <li><a href="views/visit.html">Plan Your Visit</a></li>
+        <li><a href="views/shop.html">Gift Shop</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Welcome to the Duquesne Incline</h1>
+      <p>Experience Pittsburgh's history and skyline like never before.</p>
+      <div class="slideshow">
+        <img src="static/images/view1.jpg" alt="City view from the Incline" class="slide" />
+        <!-- Add more images here -->
+      </div>
+    </section>
+
+    <section class="info">
+      <h2>Plan Your Trip</h2>
+      <p><strong>Hours:</strong> 5:30 AM – 12:45 AM</p>
+      <p><strong>Phone:</strong> <a href="tel:+14129223904">(412) 922-3904</a></p>
+      <p><strong>Email:</strong> <a href="mailto:info@duquesneincline.org">info@duquesneincline.org</a></p>
+      <div id="map"></div>
+    </section>
+
+    <section>
+      <h2>Join Our Mailing List</h2>
+      <form id="contact-form">
+        <label for="name">Name *</label>
+        <input type="text" id="name" required />
+
+        <label for="email">Email *</label>
+        <input type="email" id="email" required />
+
+        <label>
+          <input type="checkbox" id="sms-opt-in" />
+          I’d like to receive SMS messages
+        </label>
+
+        <label for="phone">Mobile Phone</label>
+        <input type="text" id="phone" pattern="\d{10}" />
+
+        <label for="zip">Zip Code</label>
+        <input type="text" id="zip" pattern="\d{5}" />
+
+        <button type="submit">Subscribe</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Duquesne Incline. All rights reserved.</p>
+  </footer>
+
+  <script src="static/scripts.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
+</body>
+</html>
