@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Duquesne Incline - Contact Us</title>
+  <link rel="stylesheet" href="../static/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="navbar">
+    <nav>
+      <ul>
+        <a href="../index.html">Home</a>
+        <a href="field-trip.html">Field Trip Programs</a>
+        <a href="history.html">History</a>
+        <a href="parking.html">Parking & Gift Shop</a>
+        <a href="contact.html">Contact Us</a>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="title-banner">
+    <h1>Contact Us</h1>
+  </div>
+
+  <div class="content">
+    <section class="mailing-list">
+      <h2>Join Our Mailing List</h2>
+      <p>Subscribe to our mailing list for updates on events, promotions, and news.</p>
+      <form action="#" method="POST" id="mailing-list-form">
+        <div class="form-group">
+          <label for="name">Name <span class="required">*</span></label>
+          <input type="text" id="name" name="name" required placeholder="Enter your full name" minlength="2" maxlength="50">
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address <span class="required">*</span></label>
+          <input type="email" id="email" name="email" required placeholder="Enter your email address" minlength="5" maxlength="100">
+        </div>
+
+        <div class="form-group">
+          <label for="sms">Receive messages via SMS?</label>
+          <input type="checkbox" id="sms" name="sms">
+        </div>
+
+        <div class="form-group">
+          <label for="mobile">Mobile Phone (Optional)</label>
+          <input type="tel" id="mobile" name="mobile" placeholder="Enter your mobile phone number" pattern="\d*" maxlength="10">
+        </div>
+
+        <div class="form-group">
+          <label for="zip">Zip Code (Optional)</label>
+          <input type="text" id="zip" name="zip" placeholder="Enter your zip code" pattern="\d{5}" maxlength="5">
+        </div>
+
+        <div class="form-group">
+          <button type="submit" id="submit-btn">Submit</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="social-media">
+      <h2>Follow Us on Social Media</h2>
+      <ul>
+        <li><a href="https://www.facebook.com/TheDuquesneIncline" target="_blank">Facebook</a></li>
+        <li><a href="https://www.yelp.com/biz/duquesne-incline-pittsburgh" target="_blank">Yelp</a></li>
+        <li><a href="https://www.viator.com/Pittsburgh-attractions/Duquesne-Incline/d22639-a21677" target="_blank">Viator</a></li>
+      </ul>
+    </section>
+  </div>
+
+  <div class="foot">
+    <div class="foot-left">
+      <p>1197 W Carson St, Pittsburgh, PA 15219</p>
+      <p>Phone: +1 (412) 381-1665 | Email: duq.incline@duquesneincline.org</p>
+    </div>
+    <div class="foot-right">
+      <img src="../static/duquesne-logo.png" alt="Duquesne Logo">
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Duquesne Incline. All rights reserved.</p>
+  </footer>
+
+  <script src="../static/script.js"></script>
+</body>
+
+</html>

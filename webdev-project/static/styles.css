@@ -1,0 +1,282 @@
+/* universal styling */
+h2 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400; 
+    font-style: normal;
+    color: black;
+    font-size: 2rem;
+    }
+
+p {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400; 
+    font-style: normal;
+    color: black;
+    font-size: 1rem;
+    }
+
+
+.navbar {
+    background-color: white;
+    color: black;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    padding: 5px;
+    z-index: 100;
+    }
+
+    .navbar nav ul {
+        display: flex;
+        justify-content: center;
+    }
+
+    .navbar nav ul a {
+        text-decoration: none;
+        font-family: "Lato", sans-serif;
+        color: black;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        padding: 10px 15px;
+    }
+
+    .navbar nav ul a:hover {
+        background-color: rgba(211, 211, 211, 0.6); 
+    }
+
+
+/* title image background */
+.title-banner {
+    background-image: url('images/title-img.webp');
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    text-align: center;
+    padding: 150px 0;
+  }
+  
+    .title-banner h1 {
+        font-family: 'Lato', sans-serif;
+        font-weight: 400; 
+        font-style: normal;
+        color: white;
+        font-size: 4rem;
+    }
+
+
+.hours-video {
+    display: flex;          
+    justify-content: flex-start;
+    align-items: center;
+    padding: 40px;
+    }
+  
+    .operation-hours {
+        flex: 1;  
+        margin-left: 12rem;              
+    }
+
+
+    .promotional-video {
+        flex: 1;
+        margin-right: 12rem;
+    }
+    .fares-slideshow {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        padding: 40px;
+      }
+    
+      .rates {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 20px;
+        width: 100%;
+        gap: 20px;
+    }
+    
+    .fares, .group-rates, .rates-notes {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        background-color: #f4f4f4;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        width: 30%;
+        max-width: 100%;
+    }
+    
+    .fares h2, .group-rates h2, .rates-notes h2 {
+        color: #333;
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+    
+    .fares p, .group-rates p, .rates-notes p {
+        color: #666;
+        font-size: 1rem;
+    }    
+    
+    /* img slideshow mechanics */
+    .slideshow-container {
+        position: relative;
+        max-width: 100%;
+    }
+    
+    .slideshow {
+        display: flex;
+        overflow: hidden; /* Hide images that are not in the current slide */
+    }
+    
+    .slideshow img {
+        width: 100%;
+        height: auto;
+        display: none; /* hide all images by default */
+    }
+    
+    /* display active image */
+    .slideshow img.active {
+        display: block;
+    }
+    
+    /* styling navigation buttons */
+    .prev, .next {
+        position: absolute;
+        top: 50%;
+        padding: 10px;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.5);
+        border: none;
+        cursor: pointer;
+        font-size: 18px;
+        transform: translateY(-50%);
+    }
+    
+    .prev {
+        left: 0;
+    }
+    
+    .next {
+        right: 0;
+    }
+    
+    .prev:hover, .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+
+.location {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    }
+    
+    .location iframe {
+    width: 100%;
+    max-width: 600px;
+    height: 450px;
+    border: 0;
+    margin-top: 20px;
+    }
+
+.foot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    color: white;
+    background-color: #333;
+}
+
+.foot-left {
+    flex: 1;
+    text-align: left;
+}
+
+.foot-left p {
+    color: white;
+}
+
+.foot-right {
+    flex: 0;
+}
+
+.foot-right img {
+    width: 100px;
+    height: auto;
+}
+      
+.content section ul li {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400; 
+    font-style: normal;
+    color: black;
+    font-size: 1rem;
+    text-decoration: none;
+}
+.content section ul li a{
+    font-family: 'Lato', sans-serif;
+    font-weight: 400; 
+    font-style: normal;
+    color: black;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.content section div{
+    font-family: 'Lato', sans-serif;
+    font-weight: 400; 
+    font-style: normal;
+    color: black;
+    font-size: 1rem;
+    text-decoration: none;
+}
+.gift {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    text-align: center;
+    width: 100%;
+}
+
+.parking-lot {
+    width: 100%;
+    max-width: 900px;
+    margin-bottom: 40px;
+}
+
+.google-maps iframe {
+    width: 100%;
+    height: 450px;
+    border: 0;
+}
+
+.gift-shop {
+    width: 100%;
+    max-width: 900px;
+    margin-bottom: 40px;
+}
+
+.gift-images {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.gift-image img {
+    width: 70%;
+    height: auto;
+    border-radius: 8px;
+}
+

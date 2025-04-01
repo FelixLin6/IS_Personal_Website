@@ -1,73 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Duquesne Incline - Home</title>
-  <link rel="stylesheet" href="static/styles.css" />
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Duquesne Incline</title>
+  <link rel="stylesheet" href="static/styles.css">
+  <!-- font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <img src="static/images/logo.png" alt="Duquesne Incline Logo" class="logo" />
+
+  <!-- Navigation Bar -->
+  <div class="navbar">
     <nav>
-      <ul class="nav-bar">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="views/history.html">History</a></li>
-        <li><a href="views/visit.html">Plan Your Visit</a></li>
-        <li><a href="views/shop.html">Gift Shop</a></li>
+      <ul>
+        <a href="index.html">Home</a>
+        <a href="views/field-trip.html">Field Trip Programs</a>
+        <a href="views/history.html">History</a>
+        <a href="views/parking.html">Parking & Gift Shop</a>
+        <a href="views/contact.html">Contact Us</a>
       </ul>
     </nav>
-  </header>
+  </div>
 
-  <main>
-    <section class="hero">
-      <h1>Welcome to the Duquesne Incline</h1>
-      <p>Experience Pittsburgh's history and skyline like never before.</p>
-      <div class="slideshow">
-        <img src="static/images/view1.jpg" alt="City view from the Incline" class="slide" />
-        <!-- Add more images here -->
+  <!-- Duquesne Incline Title with Image Background -->
+  <div class="title-banner">
+    <h1>The Duquesne Incline</h1>
+  </div>
+
+  <!-- Operation Hours and Promotional Video -->
+  <div class="hours-video">
+    <div class="operation-hours">
+      <h2>Operation Hours</h2>
+      <p>Monday - Sunday: 6:30 AM - 12:30 AM</p>
+    </div>
+    <div class="promotional-video">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/ve3KMUIlSGk?si=X0VF5Kqr_R8XFKbI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <!-- Fares & Group Rates Section with Image Slideshow -->
+  <div class="fares-slideshow">
+    <div class="rates">
+      <div class="fares">
+        <h2>Fares</h2>
+        <p>Adults (Ages 12-64) $2.50 Each Way</p>
+        <p>Children (Ages 6-11) $1.25 Each Way</p>
       </div>
-    </section>
+    
+      <div class="group-rates">
+        <h2>Group Rates (10+ People)</h2>
+        <p>Adults (Ages 12-64) $1.75 Each Way</p>
+        <p>Children (Ages 6-11) $1.00 Each Way</p>
+      </div>
+    
+      <div class="rates-notes">
+        <h2>For Free</h2>
+        <p>Children 5 and Under</p>
+        <p>University of Pittsburgh, Carnegie Mellon, and Chatham University Students, with proper I.D.</p>
+        <p>Seniors age 65 or older who present a blue or yellow PRT card or a Senior Connect Card</p>
+      </div>
+    </div>
+  </div>
 
-    <section class="info">
-      <h2>Plan Your Trip</h2>
-      <p><strong>Hours:</strong> 5:30 AM – 12:45 AM</p>
-      <p><strong>Phone:</strong> <a href="tel:+14129223904">(412) 922-3904</a></p>
-      <p><strong>Email:</strong> <a href="mailto:info@duquesneincline.org">info@duquesneincline.org</a></p>
-      <div id="map"></div>
-    </section>
+  <div class="slideshow-container">
+    <div class="slideshow">
+      <img src="static/images/slide-img1.jpg" alt="Image 1">
+      <img src="static/images/slide-img2.jpg" alt="Image 2">
+      <img src="static/images/slide-img3.jpg" alt="Image 3">
+    </div>
+    <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+    <button class="next" onclick="changeSlide(1)">&#10095;</button>
+  </div>
 
-    <section>
-      <h2>Join Our Mailing List</h2>
-      <form id="contact-form">
-        <label for="name">Name *</label>
-        <input type="text" id="name" required />
+  <!-- Location Section (Google Maps Embedding) -->
+  <div class="location">
+    <h2>Location</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4602.607796840799!2d-80.02216716994342!3d40.44010524644402!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8834f6af24753323%3A0x391d7b79fc54985b!2sDuquesne%20Incline!5e0!3m2!1sen!2sus!4v1743467146270!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
 
-        <label for="email">Email *</label>
-        <input type="email" id="email" required />
+  <!-- Footer with Address & Contact Info -->
+  <div class="foot">
+    <div class="foot-left">
+      <p>1197 W Carson St, Pittsburgh, PA 15219</p>
+      <p>Phone: +1 (412) 381-1665 | Email: duq.incline@duquesneincline.org</p>
+    </div>
+    <div class="foot-right">
+      <img src="static/duquesne-logo.png" alt="Duquesne Logo">
+    </div>
+  </div>
 
-        <label>
-          <input type="checkbox" id="sms-opt-in" />
-          I’d like to receive SMS messages
-        </label>
-
-        <label for="phone">Mobile Phone</label>
-        <input type="text" id="phone" pattern="\d{10}" />
-
-        <label for="zip">Zip Code</label>
-        <input type="text" id="zip" pattern="\d{5}" />
-
-        <button type="submit">Subscribe</button>
-      </form>
-    </section>
-  </main>
+  <script src="static/script.js"></script>
 
   <footer>
     <p>&copy; 2025 Duquesne Incline. All rights reserved.</p>
   </footer>
-
-  <script src="static/scripts.js"></script>
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
 </body>
 </html>
